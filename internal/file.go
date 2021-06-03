@@ -66,8 +66,8 @@ type FileHandle struct {
 	keepPageCache bool // the same value we returned to OpenFile
 }
 
-const MAX_READAHEAD = uint32(400 * 1024 * 1024)
-const READAHEAD_CHUNK = uint32(20 * 1024 * 1024)
+const MAX_READAHEAD = uint32( 131072*100)
+const READAHEAD_CHUNK = uint32( 131072)
 
 // NewFileHandle returns a new file handle for the given `inode` triggered by fuse
 // operation with the given `opMetadata`
